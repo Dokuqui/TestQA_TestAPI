@@ -11,7 +11,7 @@ TestQA_TestAPI is a repository dedicated to storing various test suites for end-
 ```bash
 TestQA_TestAPI/
 │
-├── e2e_tests/
+├── e2e/
 │   ├──
 │   │   ├──
 │   │   │   └──
@@ -19,7 +19,7 @@ TestQA_TestAPI/
 │   └──
 │       └──
 │
-└── api_tests/
+└── api/
     ├── parallel_run/
     │   ├── postman/
     │   │   ├── low.postman_collection.json
@@ -50,6 +50,18 @@ git clone <repository-url>
  - `postman`
  - `jest`
 
+
+## Existing test
+
+1. **parallel_run**: This Node.js script enables the parallel execution of two Postman collections using the Newman CLI. It allows users to run tests for different scenarios concurrently, improving efficiency and reducing execution time.
+
+    ##### Usage
+    1. **Configuration**: Update the paths to the Postman collections and environment files in the script (`collectionPath1`, `collectionPath2`, `envPath`).
+    2. **Execution**: Run the script using Node.js, adjusting the `PARALLEL_RUN_COUNT` parameter if necessary.
+
+    ```bash
+    npm test
+    ```
 
 ## Contributing
 

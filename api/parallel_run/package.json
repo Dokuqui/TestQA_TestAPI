@@ -1,0 +1,20 @@
+{
+  "name": "testqa_testapi",
+  "version": "1.0.0",
+  "description": "Repo for all template of test QA e2e or API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node run_collections.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dokuqui/TestQA_TestAPI"
+  },
+  "author": "Semenov Illia",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.5",
+    "newman": "^6.1.1",
+    "path": "^0.12.7"
+  }
+}
