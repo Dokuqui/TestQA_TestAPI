@@ -24,6 +24,7 @@ const runNewman = (collection, environment, callback) => {
     {
       collection,
       environment,
+      // folder: "Allowlist url",   // For bigger collections could be used this config to prevent division of collection
       reporters: 'cli',
     },
     callback
@@ -35,6 +36,12 @@ const tasks = Array.from({ length: PARALLEL_RUN_COUNT }, (_, index) => (callback
     [
       (cb) => runNewman(collectionPath1, envPath, cb),
       (cb) => runNewman(collectionPath2, envPath, cb),
+      // This config gives opportunity to run collections with small timeout
+      // (cb) => {
+      //   setTimeout(() => {
+      //     runNewman(collectionPath, envPath, cb);
+      //   }, 7000);
+      // },
     ],
     callback
   )
